@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Website - CI/CD Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🚀 CI/CD Demo</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#pipeline">Pipeline</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to My Static Website</h1>
+            <p>This site is deployed automatically using <strong>GitHub + AWS CodeBuild</strong> CI/CD pipeline.</p>
+            <a href="#pipeline" class="btn">Learn How It Works</a>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About This Project</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>📦 Source Control</h3>
+                    <p>Code is managed in a GitHub repository with version control.</p>
+                </div>
+                <div class="card">
+                    <h3>🔨 Build</h3>
+                    <p>AWS CodeBuild automatically builds the project on every push.</p>
+                </div>
+                <div class="card">
+                    <h3>🚀 Deploy</h3>
+                    <p>Built artifacts are deployed to an S3 bucket for static hosting.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pipeline" class="pipeline">
+            <h2>CI/CD Pipeline Flow</h2>
+            <div class="flow">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>Push Code</h3>
+                    <p>Developer pushes code to GitHub</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>Trigger Build</h3>
+                    <p>GitHub webhook triggers CodeBuild</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>Build & Test</h3>
+                    <p>CodeBuild runs buildspec.yml</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">4</div>
+                    <h3>Deploy to S3</h3>
+                    <p>Artifacts deployed to S3 bucket</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>This is a demo project for learning CI/CD pipelines with AWS CodeBuild.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CI/CD Demo | Built with GitHub + AWS CodeBuild</p>
+    </footer>
+</body>
+</html>
